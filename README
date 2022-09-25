@@ -1,4 +1,13 @@
 
-Build: docker build . -t go-rat
+## App
+`go run app.go`
 
+## Docker
+
+Build: `docker build . -t go-rat`
 Run docker image: `docker run -d -p 3001:3000 go-rat`
+
+
+# Load testing
+Creates 1000 concurrent sessions (virtual users), and runs this single request 10 times for each virtual user, hence 10,000 iterations.
+`cat test.js | docker run --rm -i grafana/k6 run - --vus 1000 --iterations 10000`
