@@ -1,0 +1,4 @@
+
+Build: docker build . -t go-rat
+
+Run docker image: `docker run -d -p 3001:3000 go-rat`
