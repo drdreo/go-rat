@@ -1,7 +1,7 @@
 import http from 'k6/http';
 
 export default function () {
-    const url = 'http://host.docker.internal:3000/api/project';
+    const url = 'http://host.docker.internal:3001/api/project';
     const payload = JSON.stringify({
         name: 'Test'
     });
